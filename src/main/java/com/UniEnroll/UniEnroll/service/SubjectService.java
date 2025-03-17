@@ -1,5 +1,6 @@
 package com.UniEnroll.UniEnroll.service;
 
+import com.UniEnroll.UniEnroll.entity.Course;
 import com.UniEnroll.UniEnroll.entity.Subject;
 import com.UniEnroll.UniEnroll.repository.SubjectRepository;
 import org.springframework.stereotype.Service;
@@ -17,5 +18,12 @@ public class SubjectService {
     public List<Subject> getAllSubjects(){
         return SubjectRepository.findAll();
     }
+
+    public Subject getSubjectById(Long id){
+        return SubjectRepository.findBySubjectID(id);
+    };
+
+
+
 
 }

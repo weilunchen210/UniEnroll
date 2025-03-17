@@ -1,11 +1,17 @@
 package com.UniEnroll.UniEnroll.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.Date;
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,11 +20,8 @@ public class Student {
     @Column
     private String studentName;
 
-    @Column
-    private String studentEmail;
-
-    @Column
-    private String studentPassword;
+//    @Column
+//    private String currentCGPA;
 
     @Column
     private String studentAddress;
